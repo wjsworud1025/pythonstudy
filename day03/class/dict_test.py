@@ -21,7 +21,6 @@ character = {    "name": "기사",    "level": 12,    "items": {        "sword":
 for key in character:
     if key=="name":
         result=[]
-
     value=character[key]
     if type(value) is dict:
         for inner_key in value:

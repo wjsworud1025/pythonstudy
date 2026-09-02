@@ -568,7 +568,7 @@ for i in range(1, 20) :
     print(d[i][j], end=' ')
   print()
 
-#96
+#96 바둑판 바둑돌 뒤집기
 for i in range(20):
     d.append([])
     for j in range(20):
@@ -592,4 +592,55 @@ for i in range(n):
 for i in range(1, 20):
     for j in range(1, 20):
         print(d[i][j], end=" ")
+    print()
+
+#97 설탕과자 뽑기
+w,h=map(int,input().split())
+b=[]
+for i in range(w):
+    b.append([])
+    for j in range(h):
+        b[i].append(0)
+n=int(input())
+for i in range(n):
+    l,d,x,y=map(int,input().split())
+    x-=1
+    y-=1
+    for j in range(l):
+        if d==0:
+            b[x][y+j]=1
+        else:
+            b[x+j][y]=1
+for i in range(w):
+    for j in range(h):
+        print(b[i][j],end=" ")
+    print()
+
+#98 개미의 미로찾기
+b = []
+for i in range(10):
+    b.append([])
+    for j in range(10):
+        b[i].append(0)
+for i in range(10):
+    wall = list(map(int, input().split()))
+    for j in range(10):
+        b[i][j] = wall[j]
+#start
+x=1
+y=1
+while True:
+    if b[x][y] == 2:
+        x + 7
+        y + 7
+    b[x][y] = 9
+    if b[x][y + 1] != 1:
+        y += 1
+    elif b[x + 1][y] != 1:
+        x += 1
+    else:
+        break
+for i in range(10):
+    for j in range(10):
+        print(b[i][j], end=" ")
     print()
