@@ -1,0 +1,6 @@
+#12 input 2개 이상의 정수 출력 (두개 이상의 값을 받았을 때 split으로 값을 나누는 기준을 저장한다.)
+a, b=input().split()
+a=int(a)
+b=int(b)
+print(a)
+print(b)
