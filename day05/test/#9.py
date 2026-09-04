@@ -4,11 +4,17 @@
 
 sentence = "Python is a powerful and easy programming language"
 keyword=sentence.split(' ')
-print(keyword)
-print(len(keyword))
 
 longest=keyword[0]
 for i in keyword:
     if len(longest)<=len(i):
         longest=i
 print(f"{len(keyword)} / {longest}")
+
+#max 함수 사용하기
+print(f"{max(keyword)} / {len(keyword)}")
+
+#리스트 컴프리헨션(List Comprehension) 활용하기
+lengths=[len(w) for w in keyword]
+longest2= keyword[lengths.index(max(lengths))]
+print(len(keyword),longest2)
