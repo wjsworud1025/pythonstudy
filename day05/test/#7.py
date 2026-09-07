@@ -16,7 +16,7 @@ print(sorted_scores)
 #방법2 
 scores_dict = dict(scores)
 print(scores_dict)
-#def 선언
+#def 함수 활용
 def get_score(item):
     return item[1]
 scores_dict = dict(scores_dict.items(), key=get_score,reverse=True)

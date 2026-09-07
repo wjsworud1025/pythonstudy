@@ -1,5 +1,5 @@
 # 소수 판별
-number = 55
+number = 3
 n = 2
 prime = True
 if number < 2:
