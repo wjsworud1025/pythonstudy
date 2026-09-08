@@ -3,8 +3,24 @@
 
 student = {"이름": "김클라라", "나이": 25, "전공": "컴퓨터공학"}
 key = student.keys()
-result = []
-for item in key:
-	if not isinstance(student[item], int):
-		result.append(item)
-print(result)
+# result = []
+# for item in key:
+# 	if not isinstance(student[item], int):
+# 		result.append(item)
+# print(result)
+
+for key, value in student.items():
+    if not isinstance(value, int):
+        print(f"{key} : {value}")
+
+for key, value in student.items():
+    if isinstance(value, str):
+        print(key, value)
+
+keys = ["이름", "전공"]
+index = 0
+
+while index < len(keys):
+    key = keys[index]
+    print(f"{key} : {student[key]}")
+    index += 1

@@ -28,3 +28,7 @@ for member in members:
         vip.append(member)
 for member in vip:
     print(member)
+
+print(f"등급이 매겨진 회원 목록 : {members}")
+vip_members = [ m for m in members if m["grade"] == 'VIP']
+print(f"VIP 회원 리스트 : {vip_members}")

@@ -18,3 +18,5 @@ print(f"{max(keyword)} / {len(keyword)}")
 lengths=[len(w) for w in keyword]
 longest2= keyword[lengths.index(max(lengths))]
 print(len(keyword),longest2)
+
+format
